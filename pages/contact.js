@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import {db} from '../firebase/firebase';
 import AnimationScreen from '../components/AnimationScreen';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
 
@@ -38,7 +39,16 @@ const Contact = () => {
     //Firebase collection
     db.collection('contacts').add(values)
       .then(() => {
-        alert('Message has been submitted, Thanks!');
+        Swal.fire({
+          title: 'Message has been submited, thanks!',
+          icon: 'success',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
       })
       .catch(error => {
         alert(error.message);
