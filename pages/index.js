@@ -1,65 +1,78 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout from '../components/Layout';
+import {motion} from 'framer-motion';
+import Image from 'next/image';
+import AnimationScreen from '../components/AnimationScreen';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <>
+    <div>
+      <Layout>
+      <AnimationScreen>
+          <main class="container">
+              <div class="row my-5 mx-2 mx-md-0">
+                  <div class="col-lg-6 card-me">
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      variants={{
+                        hidden: {
+                          scale: .8,
+                          opacity: 0
+                        },
+                        visible: {
+                          scale: 1,
+                          opacity: 1,
+                          transition: {
+                            delay: .8
+                          }
+                        }
+                      }}
+                    >
+                      <h2>About Me</h2>
+                    </motion.div>
+                      <p class="mt-4">My name is Emmanuel Said Jimenez Oliva, I'm currently studying the eighth semester of Intelligent Computation Engineer in the UAA. </p>
+                      <p> My focus in college is Algorithms and IA, but lately i've been studying Web Development on the side. I really enjoy learning new things, and besides programming, i enjoy working out.
+                      </p>
+                      <p> I'm currently working at SOLGEEK, which is a software development company that works with some technologies like React, and ReactNative on the app development side
+                      </p>
+                      <div class="imagen-logo contenedor text-center">
+                          <Image src="/LogoEmmJim.png " alt="Logo EmmJim " width={80} height={80} />
+                      </div>
+                  </div>
+                  <div class="col-lg-6 text-center imagen-said">
+                    <motion.div
+                      whileHover={{
+                        scale: 1.1,
+                        rotate: 2,
+                        transition: {
+                          duration: .3
+                        }
+                      }}
+                    >
+                      <Image src="/pp2.jpeg " alt=" " width={500} height={500} className="rounded"/>
+                    </motion.div>
+                  </div>
+              </div>
+          </main>
+          <div className="container">
+          <div className="row">
+            <div className="col my-5 d-flex justify-content-center">
+              <a 
+                href="https://firebasestorage.googleapis.com/v0/b/portfolio-contact-c41d9.appspot.com/o/Curriculum.pdf?alt=media&token=cb417faa-f8b6-4914-ae7a-62d33503c2da"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >Visualizar Curriculum</a>
+            
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        </AnimationScreen>
+      </Layout>
     </div>
+
+    
+    </>
   )
 }
