@@ -37,7 +37,7 @@ export default function Home() {
                       <p> I'm currently working at SOLGEEK, which is a software development company that works with some technologies like React, and ReactNative on the app development side
                       </p>
                       <div class="imagen-logo contenedor text-center">
-                          <Image src="/LogoEmmJim.png " alt="Logo EmmJim " width={80} height={80} />
+                          <Image src="/LogoEmmJim.png" alt="Logo EmmJim " width={80} height={80} />
                       </div>
                   </div>
                   <div class="col-lg-6 text-center imagen-said">
@@ -50,7 +50,7 @@ export default function Home() {
                         }
                       }}
                     >
-                      <Image src="/pp2.jpeg " alt=" " width={500} height={500} className="rounded"/>
+                      <Image src="/pp2.jpeg" alt=" " width={500} height={500} className="rounded"/>
                     </motion.div>
                   </div>
               </div>
