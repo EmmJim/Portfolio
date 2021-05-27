@@ -59,7 +59,7 @@ export default function Home() {
           <div className="row">
             <div className="col my-5 d-flex justify-content-center">
               <a 
-                href="https://firebasestorage.googleapis.com/v0/b/portfolio-contact-c41d9.appspot.com/o/Curriculum.pdf?alt=media&token=cb417faa-f8b6-4914-ae7a-62d33503c2da"
+                href="https://firebasestorage.googleapis.com/v0/b/portfolio-contact-c41d9.appspot.com/o/CurriculumAct.pdf?alt=media&token=c9405c25-4ecc-4147-b461-cc97846af89c"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
